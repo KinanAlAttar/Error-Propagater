@@ -6,6 +6,7 @@ A web application (Implemented with the Django framework and Tailwind CSS) for e
 
 The web app is not yet published but could be run with
 
+# Running The Web App
 1. `python3 manage.py runserver` 
 2. and directing to `localhost:8000` on your favorite web browser. 
 
