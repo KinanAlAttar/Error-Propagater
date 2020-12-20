@@ -7,7 +7,7 @@ The web app is not yet published but could be run with `python3 manage.py runser
 
 # Picture Examples
 
-![Form for inputting values](/assets/images/ex-pic-no-results.PNG)
+![Form for inputting values](/assets/images/ex-picture-no-results.PNG)
 
 ![Form with input and Results](/assets/images/ex-pic-with-inp-and-res.PNG)
 
