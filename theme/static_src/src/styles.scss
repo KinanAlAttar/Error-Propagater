@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  input:required {
+    @apply border-color: rgba(82, 168, 236, 0.8);
+  }
+}
+

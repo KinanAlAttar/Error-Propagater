@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> ~ Error Propagater</title>
+  <meta name="description" content="A website that aids in propagating errors">
+  <meta name="keywords" content="Error Propagater Web Project">
+  <meta name="author" content="Kinan AlAttar">
+
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="{% static 'js/variables.js' %}"></script>
+</head>
+
+<body class="bg-gray-200 font-serif leading-normal tracking-normal">
+
+  <div class="container mx-auto">
+   <section class="flex items-center justify-center">
+    <h1 class="mt-3 text-5xl text-black-900 text-opacity-75">~ Error Propagater ~</h1>
+  </section>
+</div>
+
+<div class="container mx-auto h-full flex flex-1 justify-center items-center">
+  <div class="leading-loose">
+    <form action="{% url 'epapp:submit' %}" method="post" class="max-w-full m-4 p-10 bg-gray-300 border-solid border-4 border-yellow-100 rounded-md shadow-xl">
+      {% csrf_token %}
+      <label for="eq" class="text-lg">Enter Equation: </label>
+      <div class="bg-gray-100 rounded-lg py-4 px-4">
+        <input type="text" id="eq" name="eq" placeholder="i.e. sqrt(x + y) + y" class="w-full bg-gray-200 px-4 py-1 mb-2 mt-2 text-gray-700 rounded-lg" required><br>
+      </div>
+
+      <div id="variable" class="mt-5 bg-gray-100 rounded-lg py-4 px-4 space-x-6">
+        <div class="inline-block">
+          <input type="text" id="var-sym" name="var-sym" maxlength="1" placeholder="x" class="w-12 bg-gray-200 pl-5 py-1 text-gray-800 rounded-lg" required><br>
+        </div>
+        <div class="inline-block">
+          <span class="text-gray-700">=</span>
+        </div>
+        <div class="inline-block">
+          <input type="text" id="var-val" name="var-val" placeholder="1.00" class="w-32 px-5 py-1 bg-gray-200 text-gray-700 rounded-lg" required><br>
+        </div>
+        <div class="inline-block">
+          <span class="text-gray-700">+/−<span>
+          </div>
+          <div class="inline-block">
+            <input type="text" id="var-unc" name="var-unc" placeholder="0.01" class="w-32 px-5 py-1 bg-gray-200 text-gray-700 rounded-lg" required><br>
+          </div>
+          <button id="plus" type="button" class="w-4 text-blue-600 font-sans hover:text-gray-300">+</button>
+          <button id="minus" type="button" class="w-4 text-red-600 font-mono hover:text-gray-300">−</button>
+        </div>
+
+        <span id="new-vars"></span>
+
+        <div class="flex justify-center">
+          <div>
+            <button class="px-4 py-1 text-white mt-2 font-light tracking-wider bg-gray-900 hover:bg-gray-800 mt-4 rounded-lg" type="submit">Enter</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {% include "epapp/results.html" %}
+</body>
+
+</html>
