@@ -1,6 +1,7 @@
 # Error Propagation Calculator
 A web application (Implemented with the Django framework and Tailwind CSS) for error propagation of any mathematical expression that has physical quantites with errors. The propagation follows the general formula for error propagation (the quadrature of partials multiplied with their uncertainties). I developed the web app because I had already written a python3 script for my physics senior lab that propagates error and wanted to expand on that.
 
+# General Formula For Error Propagation
 ![Equation used in propagating errors](/assets/images/e-prop-eq.PNG)
 
 The web app is not yet published but could be run with
