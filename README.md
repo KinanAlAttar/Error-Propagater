@@ -4,9 +4,9 @@ A web application (Implemented with the Django framework and Tailwind CSS) for e
 # General Formula For Error Propagation
 ![Equation used in propagating errors](/assets/images/e-prop-eq.PNG)
 
+# Running The Web App
 The web app is not yet published but could be run with
 
-# Running The Web App
 1. `python3 manage.py runserver` 
 2. and directing to `localhost:8000` on your favorite web browser. 
 
