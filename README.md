@@ -6,7 +6,7 @@ A web application (Implemented with the Django framework) for error propagation 
 The web app is not yet published but could be run with
 
 1. `python3 manage.py runserver` 
-2. directing to `localhost:8000` on your favorite web browser. 
+2. and directing to `localhost:8000` on your favorite web browser. 
 
 # Picture Examples
 
