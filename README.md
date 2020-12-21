@@ -10,6 +10,7 @@ The web app is not yet published but could be run with
 1. `python3 manage.py runserver` 
 2. and directing to `localhost:8000/epapp` on your favorite web browser. 
 
+You also need to have the sympy and django libraries installed
 # Picture Examples
 
 ![Form for inputting values](/assets/images/ex-picture-no-result.PNG)
